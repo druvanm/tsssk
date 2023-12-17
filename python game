@@ -1,0 +1,36 @@
+import random
+
+def print_intro():
+    print("Welcome to Treasure Island.")
+    print("Your mission is to find the treasure.")
+    print("You have to survive dangerous encounters with a giant snake and a crocodile.")
+
+def main():
+    print_intro()
+
+    action = input("What do you like to do? ")
+
+    if action.lower() == "fight giant snake":
+        print("You killed the giant snake and advanced to the next challenge.")
+        next_action()
+    elif action.lower() == "run away":
+        print("You couldn't run away from the giant snake and you got bitten.")
+        print("Game Over")
+    else:
+        print("That is not a valid action. Please try again.")
+        main()
+
+def next_action():
+    action = input("What do you like to do now? ")
+
+    if action.lower() == "fight crocodile":
+        print("You killed the crocodile and reached the treasure.")
+        print("Congratulations, you found the treasure.")
+    elif action.lower() == "hide":
+        print("You hid from the crocodile and avoided danger.")
+        print("Congratulations, you found the treasure.")
+    else:
+        print("That is not a valid action. Please try again.")
+        next_action()
+
+main()
